@@ -1,0 +1,441 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+.el-select :deep(input) {
+  background: transparent;
+}
+input::placeholder {
+  vertical-align: middle;
+}
+textarea {
+  outline: none;
+  border: none;
+}
+:focus {
+  outline: 0;
+}
+body {
+  // font-family: Regular, Hiragino Sans GB, Heiti SC, Microsoft YaHei,
+  //   WenQuanYi Micro Hei, Helvetica, Arial, monospace, serif;
+  /* font-family: cursive; */
+}
+.hand {
+  cursor: hand;
+}
+
+.container {
+  width: 100%;
+  user-select: none;
+}
+.nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text_hide_two {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+#container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.padding {
+  padding: 0 10px;
+}
+ul li {
+  list-style: none;
+}
+
+.allFlex {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+.startFlex {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.centerFlex {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.endFlex {
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+.itCenter {
+  align-items: center;
+}
+
+.f1 {
+  flex: 1;
+}
+.f2 {
+  flex: 2;
+}
+
+.positionAll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerAll {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.middleAll {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+.nav_header {
+  height: 56px;
+  padding: 0 15px;
+  line-height: 56px;
+  margin-top: 20px;
+}
+.hand {
+  cursor: pointer;
+}
+.Bold {
+  font-weight: bold;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+  }
+  25% {
+    opacity: 1; /*中间状态 透明度为0*/
+  }
+  75% {
+    opacity: 1; /*结尾状态 透明度为1*/
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.column {
+  flex-direction: column;
+}
+.cen {
+  width: 70vw;
+  margin: 0 auto;
+  min-width: 1200px;
+}
+.marginTen {
+  margin-left: 10px;
+}
+.marginTy {
+  margin-left: 20px;
+}
+.center {
+  text-align: center;
+}
+.end {
+  justify-content: flex-end;
+}
+
+//fun
+@mixin height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+// 基础色号
+$mainColor: var(--mian-bgColor);
+$whiteColor: var(--common-color);
+$lightBlue: #1f2331;
+$blackColor: #0f2d33;
+$greenColor: #04B800;
+$redColor: #ff4d4f;
+$noticeBg: rgba(15, 45, 51, 0.3);
+$proColor: #666666;
+$blueColor: #2c66d3;
+$footerBg: #0b0e11;
+$loginColor: #6584d1;
+$contractBg: rgb(236, 234, 234);
+$navli: var(--border-color);
+$priceColor: #d7e7ff;
+$btnBg: rgba(255, 255, 255, 0.1);
+$proText: #999999;
+$coinNav: #828598;
+$ligitBg: rgba(247, 183, 26, 0.1);
+$financialBg: #f4f8ff;
+$greyColor: var(--tradingView-text-color);
+$navColor: #848e9c;
+$border: var(--border-color);
+$titleColor: var(--title-color);
+$navBg: #191c24;
+$boxBg: var(--index-bgColor);
+$borderColor: #2f364c;
+
+$bgGradient: linear-gradient(0deg, #030b30, #1c2e5e);
+
+.opacity6 {
+  opacity: 0.6;
+}
+//颜色
+.coinNav {
+  color: $coinNav;
+  $priceColor: #a7b2c2;
+}
+.mainColor {
+  color: $mainColor;
+}
+.Wcolor {
+  color: $whiteColor;
+}
+.greyColor {
+  color: $greyColor;
+}
+.titleColor {
+  color: $titleColor;
+}
+.proText {
+  color: $proText;
+}
+.greenColor {
+  color: $greenColor;
+}
+.priceColor {
+  color: $priceColor;
+}
+.lightBlue {
+  color: $lightBlue;
+}
+.redColor {
+  color: $redColor;
+}
+.Bcolor {
+  color: $blackColor;
+}
+.proColor {
+  color: $proColor;
+}
+.blueColor {
+  color: $blueColor;
+}
+.loginColor {
+  color: $loginColor;
+}
+.navColor {
+  color:  var(--tradingView-text-color);
+}
+.darkColor {
+  color: $footerBg;
+}
+
+//背景
+.mainBg {
+  background: $mainColor;
+}
+.navBg {
+  background: var(--index-bgColor);
+}
+.boxBg {
+  background: $boxBg;
+}
+
+.btnBg {
+  background: $btnBg;
+}
+.noticeBg {
+  background: $noticeBg;
+}
+.Wbg {
+  background: $whiteColor;
+}
+.footerBg {
+  background: var(--index-footer-bgColor);
+}
+
+.kBg {
+  background: $whiteColor;
+}
+.listBg {
+  background: var(--list-bgColor);
+}
+
+.navli {
+  background: var(--border-color);
+}
+
+.greenBg {
+  background: $greenColor;
+}
+
+.redBg {
+  background: $redColor;
+}
+
+.financialBg {
+  background: $financialBg;
+}
+.headerColor:hover {
+  color: $mainColor;
+}
+.btnBgHover:hover {
+  background: $mainColor;
+}
+.btnColorHover:hover {
+  color: $mainColor;
+}
+
+.navActive {
+  color: $mainColor;
+}
+.navActive:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 2px;
+  background: $mainColor;
+}
+
+// 字体大小
+.font-Two {
+  font-size: 12px;
+}
+.font-Three {
+  font-size: 13px;
+}
+.font-Four {
+  font-size: 14px;
+}
+.font-Five {
+  font-size: 15px;
+}
+.font-Six {
+  font-size: 16px;
+}
+.font-Seven {
+  font-size: 17px;
+}
+.font-Eight {
+  font-size: 18px;
+}
+.font-Nine {
+  font-size: 19px;
+}
+.font-Ty {
+  font-size: 20px;
+}
+.font-Tt {
+  font-size: 22px;
+}
+.font-Tf {
+  font-size: 24px;
+}
+.font-Ts {
+  font-size: 26px;
+}
+.font-Te {
+  font-size: 28px;
+}
+.font-Th {
+  font-size: 30px;
+}
+
+.el-input :deep(input) {
+  // background: transparent;
+  // height: 100%;
+}
+.el-table::before {
+  background: transparent;
+}
+
+.dialog-footer {
+  padding: 10px 15px;
+}
+
+:root {
+  --common-color: #000;
+  --index-bgColor: #fff;
+  --mian-bgColor: #0052FF;
+  --title-color: #000;
+  --border-color: #d3d3d3;
+  --button-bgColor: #a0bdff;
+  --button-hoverColor: #2168ff;
+  --header-normalColor: #fff;
+  --list-bgColor: #eee;
+  --index-mainDown-bgColor:#fff;
+  --index-mainDown-button-bgColor: #f1f1f1;
+  --index-footer-bgColor: #F1F1F1;
+  --tradingCenter-primary-color: #fff;
+  --tradingCenter-marginTen-bgColor: #F1F1F1;
+  --tradingCenter-marginTen-color: #000;
+  --tradingCenter-table-hoverBgColor: #f1f1f1;
+  --title-color: #000;
+  --tradingCenter-table-thColor: #666666;
+  --tradingView-text-color: #000;
+  --trading-bgColor: #f5f5f5;
+  --header-textActive-color: #fffc00;
+  --header-borderActive-color: #9bf4e2;
+}
+
+.dark {
+  --common-color: #fff;
+  --index-bgColor: #1f2331;
+  --mian-bgColor: #f0b90a;
+  --title-color: #d5dfed; 
+  --border-color: #2f364c;
+  --button-bgColor: #fef8e7;
+  --button-hoverColor: #f3c73b;
+  --header-normalColor: #000;
+  --list-bgColor: #2f364c;
+  --index-mainDown-bgColor:#f0b90a;
+  --index-mainDown-button-bgColor: #000;
+  --index-footer-bgColor: #f0b90a;
+  --tradingCenter-primary-color: #000;
+  --tradingCenter-marginTen-bgColor: #fff;
+  --tradingCenter-marginTen-color: #000;
+  --tradingCenter-table-hoverBgColor: #2b2c2f;
+  --tradingCenter-table-thColor: #909399;
+  --tradingView-text-color: #848e9c;
+  --trading-bgColor: #1f2331;
+  --header-textActive-color: #848e9c;
+  --header-borderActive-color: #848e9c;
+}

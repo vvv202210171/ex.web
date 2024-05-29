@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.1,maximum-scale=0.1" />
+    <link rel="bookmark" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2329121_84cdbhxuc9u.css" />
+    <link rel="stylesheet" href="./load.css">
+    <script src="./tradingview/custom_scripts/chart_main/charting_library.min.js"></script>
+    <script src="config.js"></script>
+    <title>Coinbase Lite</title>
+    <script>
+        function goPAGE() {
+            if ('<%= process.env.NODE_ENV %>' == 'development') return
+            if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+                var href = location.protocol + '//' + (location.host.includes('www.') ? location.host.replace('www.', 'm.') : 'm.' + location.host)
+                if (window.location.hash.indexOf('/register/') != -1) {
+                    window.location.href = href + '/#/register'
+                } else {
+                    window.location.href = href
+                }
+            }
+        }
+        goPAGE();
+        window.onresize = goPAGE;
+    </script>
+</head>
+
+<body class="body-theme">
+    <noscript>
+        <strong>We're sorry but exchange doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+    <div id="box">
+        <div class="loading">
+            <img src="./loading.svg" alt="">
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.__lc = window.__lc || {}
+        try {
+            fetch('/api/user/get_type_value?type=KF_ADDRESS', {
+                method: "GET",
+                headers: {
+                    "Content-Type": "text/plain;charset=UTF-8",
+                    token: localStorage.getItem('token') || '',
+                    locale: localStorage.getItem('lang') || 'EN',
+                    type: 'KF_ADDRESS'
+                },
+            }).then(response => response.json()).then(data => {
+                if (data.code == 200 && data.data) {
+                    //01客户客服 后台配个id就行
+                    let serverID = data.data
+                    window.__lc.license = serverID;
+                    (function (n, t, c) {
+                        function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) }
+                        var e = {
+                            _q: [], _h: null, _v: "2.0",
+                            on: function () { i(["on", c.call(arguments)]) },
+                            once: function () { i(["once", c.call(arguments)]) },
+                            off: function () { i(["off", c.call(arguments)]) },
+                            get: function () { if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get", c.call(arguments)]) },
+                            call: function () { i(["call", c.call(arguments)]) },
+                            init: function () { var n = t.createElement("script"); n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n) }
+                        }; !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
+                    }(window, document, [].slice))
+                }
+            });
+        } catch (e) {
+            console.log(e)
+        }
+
+        var elements = document.getElementsByClassName('body-theme');
+            elements[0].classList.add(window._config.them);
+    </script>
+    <script type="text/javascript" src="animation.js" opacity=1></script>
+</body>
+
+</html>

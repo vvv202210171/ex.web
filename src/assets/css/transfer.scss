@@ -1,0 +1,77 @@
+.buy {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  padding: 15px 15px 30px 15px;
+  &_nav {
+    margin-bottom: 10px;
+    span {
+      display: inline-block;
+      width: 45%;
+      @include height(30px);
+      border-radius: 5px;
+    }
+  }
+}
+.el-select :deep(.el-input__inner) {
+  height: 35px !important;
+}
+.balance {
+  position: relative;
+  @include height(30px);
+}
+.balance span {
+  font-size: 12px;
+}
+.charge-btn {
+  position: absolute;
+  right: 0;
+  padding: 2px 20px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.set_ipt {
+  height: 34px;
+  margin-top: 8px;
+  position: relative;
+  border-radius: 5px;
+  align-items: center;
+  span {
+    width: 60px;
+  }
+  span:last-child {
+    margin-left: 10px;
+  }
+}
+.set_ipt .el-input,
+.set_ipt .set-newprice {
+  @include height(34px);
+}
+
+.buy-btn {
+  width: 100%;
+  @include height(34px);
+  text-align: center;
+  margin-top: 10px;
+  button {
+    width: 100%;
+  }
+  &_noLogin {
+    border: 1px solid $border;
+    border-radius: 5px;
+  }
+}
+
+.el-input :deep(.el-input__inner) {
+  background: transparent;
+}
+.el-slider :deep(.el-slider__stop) {
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: $mainColor !important;
+}
+.el-slider :deep(.el-slider__runway) {
+  background: $navBg;
+}
